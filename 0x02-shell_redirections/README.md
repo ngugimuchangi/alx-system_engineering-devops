@@ -4,3 +4,4 @@
 2. Display the content of the /etc/passwd file
 3. Script to display two files
 4. Display last 10 lines
+5. Display first 10 lines

@@ -10,3 +10,4 @@
 8. Redirect input to other file
 9. Duplicate nth line and redirect output
 10. Remove javascript files
+11. Find and count directories

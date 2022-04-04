@@ -7,3 +7,4 @@
 5. Display first 10 lines
 6. Display nth line
 7. Ignore special characters
+8. Redirect input to other file

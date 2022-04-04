@@ -8,3 +8,4 @@
 6. Display nth line
 7. Ignore special characters
 8. Redirect input to other file
+9. Duplicate nth line and redirect output

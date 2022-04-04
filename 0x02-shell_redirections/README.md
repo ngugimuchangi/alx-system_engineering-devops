@@ -12,3 +12,6 @@
 10. Remove javascript files
 11. Find and count directories
 12. Display 10 newest files
+13. Sort and display unique lines
+14. Find specific word in a file
+15. Find the count of lines with that match your search pattern

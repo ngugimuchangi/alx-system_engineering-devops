@@ -20,3 +20,4 @@
 18. Display lines starting with a letter
 19. Replace characters
 20. Delete specified characters
+21. Display output in reverse

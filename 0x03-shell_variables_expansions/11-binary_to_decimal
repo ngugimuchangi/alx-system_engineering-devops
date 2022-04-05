@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "\x\n" "$BINARY"
+echo $((2#$BINARY))

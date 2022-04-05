@@ -19,3 +19,4 @@
 17. Display lines that don't meet search pattern
 18. Display lines starting with a letter
 19. Replace characters
+20. Delete specified characters

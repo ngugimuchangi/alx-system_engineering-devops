@@ -18,3 +18,4 @@
 16. Display next n lines after search
 17. Display lines that don't meet search pattern
 18. Display lines starting with a letter
+19. Replace characters

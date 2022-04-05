@@ -21,3 +21,4 @@
 19. Replace characters
 20. Delete specified characters
 21. Display output in reverse
+22. Sort then select fields to display

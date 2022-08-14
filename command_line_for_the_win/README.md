@@ -3,7 +3,7 @@
 ## About
 [Command line challenge](https://cmdchallenge.com/)
 
-## Files :page_facing_up:
+## Files :page_with_curl:
 | File 					       | Details                        |
 | -------------------------------------------- | ------------------------------ |
 | [0-first_9_tasks.png](0-first_9_tasks.png) | Tasks 0 - 9 of CMD challenge   |

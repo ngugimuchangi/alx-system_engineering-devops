@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Script to print numbers from 1 to 20 and
+# 	'bad luck from China at 4th iteration'
+# 	'good luck from Japan at 9th iteration'
+# 	'bad luck from Italy at 17th iteration'
+a=1
+while [ "$a" -lt 20 ] || [ "$a" -eq 20 ]
+do
+	echo "$a"
+	if [ "$a" -eq 4 ]; then
+		echo "bad luck from China"
+	elif [ "$a" -eq 9 ]; then
+		echo "bad luck from Japan"
+	elif [ "$a" -eq 17 ]; then
+		echo "bad luck from Italy"
+	fi
+	((a = "$a" + 1))
+done

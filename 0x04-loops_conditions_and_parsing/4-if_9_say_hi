@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Script to print 'Best School 10 times using
-# + while loop but print 'Hi' on the 9th iteration
+# + while loop and print 'Hi' on the 9th iteration
+
 a=0
 while [ "$a" -lt 10 ]
 do

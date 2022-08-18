@@ -5,5 +5,5 @@ files=$(ls ./)
 
 for i in $files
 do
-	echo "$i" | sed -r 's/[0-9A-z]*-/''/'
+	echo "$i" | cut -f 1 -d '-' --complement # sed -r 's/[0-9A-z]*-/''/'
 done

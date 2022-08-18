@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Script to print info about users based
+# + contents for /etc/passwd
+
+file="/etc/passwd"
+while read -r line
+do
+	IFS=":"
+	set $line
+	echo -e "The user $1 is part of the $4 gang, lives in $6 and rides $7. $3's place is protected by the passcode $2, more info about the user here: $5"
+done < "$file"

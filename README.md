@@ -4,7 +4,7 @@ Shell basics project
 ## Projects
 
 ### 1. Shell basics
-* [0x00-shell_basics](0x00-shell_basics)
+```* [0x00-shell_basics](0x00-shell_basics)```
 
 ### 2. File permissions
 * [0x01-shell_permissions](0x01-shell_permissions)

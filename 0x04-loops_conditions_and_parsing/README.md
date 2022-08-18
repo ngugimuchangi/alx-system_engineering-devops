@@ -8,7 +8,7 @@ Shell scripts:
 * Script portability
 ## Tasks
 0. Create a SHH RSA key pair
-* [0-RSA_public_key.pub](0-RSA_public_key.pub)
+	* [0-RSA_public_key.pub](0-RSA_public_key.pub)
 
 1. Script that prints 'Best School' 10 times using for loop
 	* [1-for_best_school](1-for_best_school)
@@ -16,7 +16,7 @@ Shell scripts:
 2. Script that prints 'Best School' 10 times using while loop
 	* [2-while_best_school](2-while_best_school)
 
-3 Script that prints 'Best School' 10 times using until
+3. Script that prints 'Best School' 10 times using until
 	* [3-until_best_school](3-until_best_school)
 
 4. Script that prints 'Best School' 10 times and 'Hi' on the 9<sup>th</sup> iteration

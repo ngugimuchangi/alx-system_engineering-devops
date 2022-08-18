@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Script to print 'Best School 10 times using
+# + while loop but print 'Hi' on the 9th iteration
+a=0
+while [[ "$a" -lt 10 ]]
+do
+	if [ "$a" -eq 8 ]; then
+		echo "Hi"
+	else
+		echo "Best School"
+	fi
+	((a = "$a" + 1))
+done

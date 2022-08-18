@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Script to print 'Best School 10 times using
+# + while loop
+a=10;
+until [[ "$a" -eq 0 ]]
+do
+	echo "Best School"
+	((a = "$a" - 1))
+done

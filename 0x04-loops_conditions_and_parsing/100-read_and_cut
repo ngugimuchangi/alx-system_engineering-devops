@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Script to read and edit content
+# Reads the /etc/passwd and displays the first three fields
+# 	1 username
+#	2. user id
+#	3. home directory path for the usr
+
+file="/etc/passwd"
+while read -r line
+do
+	echo "$line" | cut -f 1,3,6 -d ":"
+done < "$file"

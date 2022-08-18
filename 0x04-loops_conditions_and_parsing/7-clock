@@ -4,7 +4,7 @@
 hr=0
 min=0
 
-while [ "$hr" -lt 13 ]
+while [ "$hr" -lt 12 ]
 do
 	if [ "$min" -eq 0 ]; then
 		echo "Hour: $hr"

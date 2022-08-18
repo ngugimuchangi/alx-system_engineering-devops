@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-IFS=','
-"set x, y = 1, 2
-echo "$x $y"

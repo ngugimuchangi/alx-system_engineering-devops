@@ -3,9 +3,9 @@
 # + contents for /etc/passwd
 
 file="/etc/passwd"
-while read -r line
+while IFS=":" read -r USERNAME PASSWORD USER_ID GROUP_ID USER_INFO HOME_DIR CMD_SHELL
 do
-	IFS=":-;"
-	set $line
-	echo -e "The user $1 is part of the $4 gang, lives in $6 and rides $7. $3's place is protected by the passcode $2, more info about the user here: $5"
+	echo -n "The user $USERNAME is part of the $GROUP_ID gang, lives in $HOME_DIR and rides $CMD_SHELL. "
+	echo -n "$USER_ID's place is protected by the passcode $PASSWORD, "
+	echo "more info about the user here: $USER_INFO"
 done < "$file"

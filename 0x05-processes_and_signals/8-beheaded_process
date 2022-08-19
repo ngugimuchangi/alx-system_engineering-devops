@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Script to terminate '7-highlander'
+
+pkill  -SIGKILL -f "7-highlander"

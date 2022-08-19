@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Script that display a list of currently running processes:
+#	Shows all processed including those without a TTY
+#	Organized in a user-oriented format
+#	Shows process hierarchy
+
+top

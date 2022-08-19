@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 # Script to send kill signal to '4-to_infinity_and_beyond'
 
-pid=$(pidof bash | cut -f 3 -d ' ')
-kill "$pid"
+killall bash

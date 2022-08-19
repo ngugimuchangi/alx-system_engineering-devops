@@ -1,0 +1,47 @@
+#!/usr/bin/env bash
+# Script that manages the execution of manage_my_process script
+# Syntax: manage_my_process [start|stop|restart]
+# Option:
+# 	start: start the script
+#	stop: stop the script
+#	restart: restart the script
+
+function error()
+{
+	echo "Usage: manage_my_process {start|stop|restart}"
+	exit
+}
+
+function start()
+{
+	sudo bash -c 'pgrep -of "101-manage_my_process" > /var/run/my_process.pid'
+	./manage_my_process &
+	echo "manage_my_process started"
+}
+
+function stop()
+{
+	sudo rm /run/my_process.pid
+	pkill -f "manage_my_process"
+	echo "manage_my_process stopped"
+}
+
+function restart()
+{
+	sudo rm /run/my_process.pid
+	sudo bash -c 'pgrep -of "101-manage_my_process" > /var/run/my_process.pid'
+	./manage_my_process
+	echo "manage_my_process restarted"
+}
+
+if [ "$#" -lt 1 ]; then
+	"error"
+elif [ "$1" = "start" ]; then
+	"start"
+elif [ "$1" = "restart" ]; then
+	"start"
+elif [ "$1" = "stop" ]; then
+	"stop"
+else
+	"error"
+fi

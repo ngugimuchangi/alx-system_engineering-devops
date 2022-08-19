@@ -4,4 +4,4 @@
 #	Organized in a user-oriented format
 #	Shows process hierarchy
 
-top
+ps -eF

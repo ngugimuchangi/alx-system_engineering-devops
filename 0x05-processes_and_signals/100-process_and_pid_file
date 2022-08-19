@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# Script that creates file with its PID
+# display text to stdout and catches SIGTERM, SIGQUIT, and SIGINT
+
+sudo bash -c 'pgrep -of "100-process_and_pid_file" > /var/run/myscript.pid'
+
+function terminate()
+{
+	echo "I hate the kill command"
+	sudo rm /run/myscript.pid
+}
+
+function interrupt()
+{
+	echo "Y U no love me?!"
+	exit
+}
+
+function quit()
+{
+	sudo rm /run/myscript.pid
+	exit
+}
+
+while true
+do
+	echo "To infinity and beyond"
+	trap "terminate" SIGTERM
+	trap "interrupt" SIGINT
+	trap "quit" SIGQUIT
+	sleep 2
+done

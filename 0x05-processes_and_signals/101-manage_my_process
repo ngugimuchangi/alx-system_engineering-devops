@@ -21,9 +21,9 @@ function start()
 
 function stop()
 {
-	echo "manage_my_process stopped"
 	kill "$(cat /run/my_process.pid)"
 	rm /run/my_process.pid
+	echo "manage_my_process stopped"
 }
 
 function restart()

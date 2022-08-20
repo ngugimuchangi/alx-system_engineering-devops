@@ -41,7 +41,7 @@ Unix processes and signals
 * In between every I am alive! message, the program should pause for 2 seconds
 * Write Bash (init) script 101-manage_my_process that manages manage_my_process. (both files need to be pushed to git)
 
-**Requirements:**
+	**Requirements:**
 * When passing the argument start:
 	* Starts manage_my_process
 	* Creates a file containing its PID in /var/run/my_process.pid

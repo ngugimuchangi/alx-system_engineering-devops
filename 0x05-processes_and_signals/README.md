@@ -22,23 +22,23 @@ Unix processes and signals
 6. Alterantive script that stops **'4-to_infinity_and_beyond process/** 
 	* [6-stop_me_if_you_can](6-stop_me_if_you_can)
 7. Script that:
-> * ***'To infinity and beyond indefinitely'***
-> * With a sleep 2 in between each iteration
-> * ***'I am invincible!!!'*** when receiving a SIGTERM signal
->	* [7-highlander](7-highlander)
+* ***'To infinity and beyond indefinitely'***
+* With a sleep 2 in between each iteration
+* ***'I am invincible!!!'*** when receiving a SIGTERM signal
+	* [7-highlander](7-highlander)
 8. Script that kills the process 7-highlander
 	* [8-beheaded_process](8-beheaded_process)
 9. Script that:
-> * Creates the file **/var/run/myscript.pid** containing its PID
-> * Displays ***'To infinity and beyond indefinitely'***
-> * Displays ***'I hate the kill'*** command when receiving a SIGTERM signal
-> * Displays ***'Y U no love me?!'*** when receiving a SIGINT signal
-> * Deletes the file **/var/run/myscript.pid** and terminates itself when receiving a SIGQUIT or SIGTERM signal
->>	* [100-process_and_pid_file](100-process_and_pid_file)
+* Creates the file **/var/run/myscript.pid** containing its PID
+* Displays ***'To infinity and beyond indefinitely'***
+* Displays ***'I hate the kill'*** command when receiving a SIGTERM signal
+* Displays ***'Y U no love me?!'*** when receiving a SIGINT signal
+* Deletes the file **/var/run/myscript.pid** and terminates itself when receiving a SIGQUIT or SIGTERM signal
+	* [100-process_and_pid_file](100-process_and_pid_file)
 10. Write a manage_my_process Bash script that:
-> Indefinitely writes I am alive! to the file /tmp/my_process
-> In between every I am alive! message, the program should pause for 2 seconds
-> Write Bash (init) script 101-manage_my_process that manages manage_my_process. (both files need to be pushed to git)
+* Indefinitely writes I am alive! to the file /tmp/my_process
+* In between every I am alive! message, the program should pause for 2 seconds
+* Write Bash (init) script 101-manage_my_process that manages manage_my_process. (both files need to be pushed to git)
 
 > **Requirements:**
 > * When passing the argument start:

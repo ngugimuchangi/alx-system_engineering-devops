@@ -31,7 +31,7 @@ int main(void)
 	{
 		my_pid = fork();
 		if (!my_pid)
-			exit(EXIT_FAILURE);
+			exit(EXIT_SUCCESS);
 		printf("Zombie process created, PID: %u\n", my_pid);
 	}
 	infinite_while();

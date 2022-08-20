@@ -14,21 +14,23 @@ function error()
 
 function start()
 {
-	sudo bash -c 'pgrep -of "101-manage_my_process" > /var/run/my_process.pid'
+	echo $$ > /var/run/my_process.pid
 	./manage_my_process &
 	echo "manage_my_process started"
 }
 
 function stop()
 {
-	trap 'sudo rm /run/my_process.pid && echo "manage_my_process stopped"' SIGTERM
 	pkill -f "manage_my_process"
+	rm /run/my_process.pid
+	echo "manage_my_process stopped"
 }
 
 function restart()
 {
-	sudo rm /run/my_process.pid
-	sudo bash -c 'pgrep -of "101-manage_my_process" > /var/run/my_process.pid'
+	pkill -f "manage_my_process"
+	rm /run/my_process.pid
+	echo $$ > /var/run/my_process.pid
 	./manage_my_process &
 	echo "manage_my_process restarted"
 }

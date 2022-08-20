@@ -10,7 +10,6 @@ Unix processes and signals
 ## Tasks
 0. Script that displays its own PID
 	* [0-what-is-my-pid](0-what-is-my-pid)
-
 1. Script that displays a list of currently running processes
 	* [1-list_your_processes](1-list_your_processes)
 2. Script that displays lines containing the word **'bash'**

@@ -9,6 +9,7 @@ Unix processes and signals
 
 ## Tasks
 0. Script that displays its own PID
+	* [0-what-is-my-pid](0-what-is-my-pid)
 1. Script that displays a list of currently running processes
 	* [1-list_your_processes](1-list_your_processes)
 2. Script that displays lines containing the word **'bash'**
@@ -21,7 +22,7 @@ Unix processes and signals
 	* [5-dont_stop_me_now](5-dont_stop_me_now)
 6. Alterantive script that stops **'4-to_infinity_and_beyond process/** 
 	* [6-stop_me_if_you_can](6-stop_me_if_you_can)
-7. Script that:
+7. Script that displays:
 * ***'To infinity and beyond indefinitely'***
 * With a sleep 2 in between each iteration
 * ***'I am invincible!!!'*** when receiving a SIGTERM signal

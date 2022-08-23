@@ -11,6 +11,7 @@ This project focuses on building regular expression using Oniguruma, a regular e
 	* [0-simply_match_school.rb](0-simply_match_school.rb)
 
 1. Repetition Token #0
+
 ![][https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/9/e7db3c377d46453588fc84f3a975661d142fee91.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20220823%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220823T120755Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=6abe5e89e4e6c0e0ffbd5ab8307c09d3e042690421b3dafced6c1ece74293c23]
 	
 	Requirements:

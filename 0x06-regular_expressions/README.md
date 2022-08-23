@@ -3,7 +3,7 @@
 This project focuses on building regular expression using Oniguruma, a regular expression library that which is used by Ruby by default.
 
 ## Tasks
-0. Simply matching ***School***
+0. Simply matching ***'School'***
 	
 	Requirements:
 	* The regular expression must match School
@@ -13,28 +13,28 @@ This project focuses on building regular expression using Oniguruma, a regular e
 1. Repetition Token #0
 
 	Requirements:
-	* Find the regular expression that will match **'hbtn'** with two to five incidences of **'t'**
+	* Find the regular expression that will match ***'hbtn'*** with two to five incidences of ***'t'***
 	* Using the project instructions, create a Ruby script that accepts one argument and pass it to a regular expression matching method
 	* [1-repetition_token_0.rb](1-repetition_token_0.rb)
 
 2. Repetition Token #1
 	
 	Requirements:
-	* Find the regular expression that will match **'hbtn'** with zero or more incidences of **'b'**
+	* Find the regular expression that will match ***'hbtn'*** with zero or more incidences of ***'b'***
 	* Using the project instructions, create a Ruby script that accepts one argument and pass it to a regular expression matching method
 	* [2-repetition_token_1.rb](2-repetition_token_1.rb)
 
 3. Repetition Token #2
 	
 	Requirements:
-	* Find the regular expression that will match **'hbtn'** with one ore incidences of **'t'**
+	* Find the regular expression that will match ***'hbtn'*** with one ore incidences of ***'t'***
 	* Using the project instructions, create a Ruby script that accepts one argument and pass it to a regular expression matching method
 	* [3-repetition_token_2.rb](3-repetition_token_2.rb)
 
 4. Repetition Token #3
 	
 	Requirements:
-	* Find the regular expression that will match **'hbtn'** with **'t'** as an optional character
+	* Find the regular expression that will match ***'hbtn'*** with ***'t'*** as an optional character
 	* Using the project instructions, create a Ruby script that accepts one argument and pass it to a regular expression matching method
 	* Your regex should not contain square brackets
 	* [4-repetition_token_3.rb](4-repetition_token_3.rb)

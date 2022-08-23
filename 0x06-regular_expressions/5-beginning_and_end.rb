@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+# Regular expression to match one or more of incidence of 't'
+
+puts ARGV[0].scan(/^h\w*n$/).join

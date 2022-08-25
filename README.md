@@ -24,5 +24,8 @@ Shell basics project
 ### 6. Regular expressions
 > * [0x06-regular_expressions](0x06-regular_expressions)
 
-### 7. Command line challenge
+### 7. Networking basics
+> * [0x07-networking_basics](0x07-networking_basics)
+
+### 8. Command line challenge
 > * [command_line_for_the_win](command_line_for_the_win)

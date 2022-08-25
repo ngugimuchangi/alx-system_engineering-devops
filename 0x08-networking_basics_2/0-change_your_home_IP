@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Script that resolves:
+#	1. localhost to 127.0.0.2
+#	2. facebook.com 8.8.8.8
+
+echo "127.0.0.2	localhost" >> /etc/hosts
+echo "8.8.8.8	facebook.com" >> /etc/hosts

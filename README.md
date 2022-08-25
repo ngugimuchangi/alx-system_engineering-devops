@@ -27,5 +27,8 @@ Shell basics project
 ### 7. Networking basics
 > * [0x07-networking_basics](0x07-networking_basics)
 
-### 8. Command line challenge
+### 8. 0x08. Networking basics #1
+> * [0x08-networking_basics_2](0x08-networking_basics_2)
+
+### 9. Command line challenge
 > * [command_line_for_the_win](command_line_for_the_win)

@@ -1,1 +1,17 @@
 https://imgur.com/a/01jRl95
+
+# Network overview
+A server is a computer hardware or software that provides functionality for other programs or devices called clients.
+The network has one hardware server that houses three software servers: the web, application, and database servers.
+Domain names make it easy for users to access websites without the need to remember their IP addresses.
+Domain names are translated into IP addresses through a look up processes starting from the browser’s cache, system host files and eventually domain servers.
+Domain servers contain various resource records to help in navigate the web. A records map domain names to their IP addresses e.g., www.foobar.com to 8.8.8.8.
+The client computer communicates with the server by sending HTTP requests over TCP, once it obtains the server’s IP address.
+The Web server provides the primary documentation such HTML layout and CSS presentation.
+The application server provides the dynamic content, populating the HTML templates using data fetched from the database.
+The database stores the user data.
+
+# Issues
+Reliance on a singly physical server introduces a single point of failure.
+The whole system shuts down if the physical server fails. 
+It is also difficult to update the codebase without interrupting servicing user requests. Scaling will be difficult as user requests increase and become a bottleneck.

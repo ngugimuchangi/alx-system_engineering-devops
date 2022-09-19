@@ -33,7 +33,7 @@ System engineering DevOps projects
 > * [0x08-networking_basics_2](0x08-networking_basics_2)
 
 ### 9. 0x09. Web infrastructure design
-> * [0x09. Web infrastructure design](0x09. Web infrastructure design)
+> * [0x09-Web_infrastructure_design](0x09-Web_infrastructure_design)
 
 ### 10. Command line challenge
 > * [command_line_for_the_win](command_line_for_the_win)

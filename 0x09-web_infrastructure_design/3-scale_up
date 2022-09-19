@@ -1,2 +1,7 @@
 https://imgur.com/a/ntOEhaa
-One of the major problems of the previous network was having a single load balancer, which was a single point of failure. Adding a new HAproxy server solves this because it can take over if the other fails. HAproxy servers also enable load balancing at several points in the network – particularly the transport and application layers. In this case, our HAproxy servers are only implemented at the application layer.
+
+# Scaling out / Horizontal scaling
+One of the major problems of the previous network was having a single load balancer, which was a single point of failure.
+Adding a new HAproxy server solves this because it can take over if the other fails.
+HAproxy servers also enable load balancing at several points in the network – particularly the transport and application layers.
+In this case, our HAproxy servers are only implemented at the application layer.

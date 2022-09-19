@@ -1,4 +1,4 @@
-# Web Infastructure and Design
+# 0x09. Web infrastructure design
 
 # About
 - Networking Basics

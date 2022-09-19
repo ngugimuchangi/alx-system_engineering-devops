@@ -1,6 +1,8 @@
-# alx-system_engineering-devops
+# Alx-system_engineering-devops
+
 ## About
-Shell basics project
+System engineering DevOps projects
+
 ## Projects
 
 ### 0. Shell basics
@@ -30,5 +32,8 @@ Shell basics project
 ### 8. 0x08. Networking basics #1
 > * [0x08-networking_basics_2](0x08-networking_basics_2)
 
-### 9. Command line challenge
+### 9. 0x09. Web infrastructure design
+> * [0x09. Web infrastructure design](0x09. Web infrastructure design)
+
+### 10. Command line challenge
 > * [command_line_for_the_win](command_line_for_the_win)

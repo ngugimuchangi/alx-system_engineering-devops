@@ -18,6 +18,9 @@ The load balancer introduces SSL termination, the decryption of encrypted data b
 The challenge of SSL termination is that it presents a vulnerability on the server side. Unencrypted HTTP sessions are easily readable by others.
 Another network challenges include having all software server components on one physical server.
 It deters horizontal scaling and means that all the virtual servers fail if the physical server fails. It is also difficult to pinpoint the problem within this server setting.
+Relying on one master MySQL server also makes it difficult to scale horizontally.
+Vertical scaling can be done by increasing the CPU and RAM of the physical server. However, the approach has its bottlenecks.
+Asynchronous replication of slave databases also creates room for potential data loss should the master fail before the slaves are updated.
 
 # Monitoring
 Another addition is three monitoring clients. In this case, DataDog would be a viable monitoring client for monitoring both the physical and software servers.

@@ -1,3 +1,5 @@
+# Script to create a file in /temp directory
+
 file {'school':
 ensure  => 'present',
 path    => '/tmp/school',

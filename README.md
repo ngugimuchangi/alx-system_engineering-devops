@@ -35,5 +35,17 @@ System engineering DevOps projects
 ### 9. 0x09. Web infrastructure design
 > * [0x09-Web_infrastructure_design](0x09-Web_infrastructure_design)
 
-### 10. Command line challenge
+### 10. 0x0A-configuration_management
+> * [0x0A-configuration_management](0x0A-configuration_management)
+
+### 11. 0x0B-ssh
+> * [0x0B-ssh](0x0B-ssh)
+
+### 12. 0x0C. Web server
+> * []()
+
+### 13. 0x0D. Web stack debugging #0
+> * []()
+
+### 14. Command line challenge
 > * [command_line_for_the_win](command_line_for_the_win)

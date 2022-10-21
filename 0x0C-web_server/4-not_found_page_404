@@ -2,17 +2,17 @@
 # Script to create a custom webpage
 
 pattern="^\tlocation / {"
-replacement="\terror_page 404 /custom_404.html;\n\
-\tlocation = /custom_404.html {\n\
-\t\troot /var/www/html;\n\
-\t\tinternal;\n\n\
-\t}\n\n\
-\tlocation / {\n"
+replacement="\terror_page 404 /404.html;\
+	location = /404.html {\
+		root /usr/share/nginx/html;\
+		internal;\
+	}\n\n\
+	location / {"
 file="/etc/nginx/sites-available/default"
 
 sudo apt -y update
 sudo apt -y upgrade
 sudo install -y nginx
-sudo echo "Ceci n'est pas une page" | sudo tee /var/www/html/custom_404.html
+sudo sh -c 'echo -e "Ceci n'\''est pas une page" > /usr/share/nginx/html/404.html'
 sudo sed -iE "s@$pattern@$replacement@g" $file
-sudo systemctl restart nginx
+sudo service nginx restart

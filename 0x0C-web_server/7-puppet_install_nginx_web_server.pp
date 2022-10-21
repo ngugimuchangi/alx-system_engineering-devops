@@ -18,12 +18,6 @@ exec { 'install_nginx':
   command  => 'sudo apt -y install nginx'
 }
 
-exec { 'nginx_restart':
-  provider => 'shell',
-  path     => $command_path,
-  command  => 'sudo service nginx restart'
-}
-
 exec { 'home_page':
   provider => 'shell',
   path     => $command_path,
@@ -37,5 +31,10 @@ exec { 'redirection':
   provider => 'shell',
   path     => $command_path,
   command  => '/usr/bin/sed -i "s@$pattern@$replacement@g" $default_config',
-  notify   => Exec['nginx_restart']
+}
+
+exec { 'nginx_restart':
+  provider => 'shell',
+  path     => $command_path,
+  command  => 'sudo service nginx restart'
 }

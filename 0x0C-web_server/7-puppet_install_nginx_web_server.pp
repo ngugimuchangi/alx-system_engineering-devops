@@ -27,7 +27,7 @@ exec { 'nginx_restart':
 exec { 'home_page':
   provider => 'shell',
   path     => $command_path,
-  command  => ['sudo echo "Hello World!" > $index', 'sudo echo "Hello World!" > $debian_index']
+  command  => ['sudo echo "Hello World!" | sudo tee $index', 'sudo echo "Hello World!" | sudo tee $debian_index']
 }
 
 exec { 'redirection':

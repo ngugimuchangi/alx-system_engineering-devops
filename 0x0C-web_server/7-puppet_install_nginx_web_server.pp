@@ -9,7 +9,6 @@ exec { 'update_package_repo':
   provider => 'shell',
   path     => $command_path,
   command  => 'sudo apt -y update',
-  before   => Exec['install_nginx']
 }
 
 exec { 'install_nginx':
@@ -30,7 +29,7 @@ exec { 'redirection':
 	rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;'
   provider => 'shell',
   path     => $command_path,
-  command  => '/usr/bin/sed -i "s@$pattern@$replacement@g" $default_config',
+  command  => 'sudo sed -i "s@$pattern@$replacement@g" $default_config',
 }
 
 exec { 'nginx_restart':

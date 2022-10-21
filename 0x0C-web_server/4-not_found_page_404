@@ -12,7 +12,7 @@ file="/etc/nginx/sites-available/default"
 
 sudo apt -y update
 sudo apt -y upgrade
-sudo install -y nginx
+sudo apt install -y nginx
 sudo sh -c 'echo -e "Ceci n'\''est pas une page" > /usr/share/nginx/html/404.html'
 sudo sed -iE "s@$pattern@$replacement@g" $file
 sudo service nginx restart

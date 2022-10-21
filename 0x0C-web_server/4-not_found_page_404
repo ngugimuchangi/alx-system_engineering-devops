@@ -10,6 +10,6 @@ replacement="\terror_page 404 /custom_404.html;\n\
 \tlocation / {\n"
 file="/etc/nginx/sites-available/default"
 
-echo "Ceci n'est pas une page" > /var/www/html/custom_404.html
+sudo echo "Ceci n'est pas une page" | sudo tee /var/www/html/custom_404.html
 sudo sed -iE "s@$pattern@$replacement@g" $file
 sudo systemctl restart nginx

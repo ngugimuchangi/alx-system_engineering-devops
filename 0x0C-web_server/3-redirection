@@ -5,5 +5,8 @@ pattern="server_name _;"
 replacement="server_name _;\n\trewrite ^/redirect_me$ https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;"
 file="/etc/nginx/sites-available/default"
 
+sudo apt -y update
+sudo apt -y upgrade
+sudo install -y nginx
 sudo sed -i "s@$pattern@$replacement@g" $file
 sudo systemctl restart nginx

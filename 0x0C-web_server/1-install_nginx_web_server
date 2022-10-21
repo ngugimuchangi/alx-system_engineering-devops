@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Script to install and start nginx web server
+
+apt update
+apt install -y nginx
+sudo chown -R "$USER:$USER" /var/www/html/
+echo "Hello World!" >  /var/www/html/index.html
+sudo systemctl restart nginx

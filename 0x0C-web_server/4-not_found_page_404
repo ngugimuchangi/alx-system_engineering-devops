@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Script to create a custom webpage
+
+pattern="^\tlocation / {"
+replacement="\terror_page 404 /custom_404.html;\n\
+\tlocation = /custom_404.html {\n\
+\t\troot /var/www/html;\n\
+\t\tinternal;\n\n\
+\t}\n\n\
+\tlocation / {\n"
+file="/etc/nginx/sites-available/default"
+
+echo "Ceci n'est pas une page" > /var/www/html/custom_404.html
+sudo sed -iE "s@$pattern@$replacement@g" $file
+sudo systemctl restart nginx

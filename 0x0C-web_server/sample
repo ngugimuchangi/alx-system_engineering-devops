@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+replacement="hi\n\
+\thow\n \
+\tare\n\
+\tyou"
+sed -i "s@hello world@$replacement@g" hello.txt

@@ -3,30 +3,38 @@
 $index = '/usr/share/nginx/html'
 $debian_index = '/var/www/html/index.nginx-debian.html'
 $default_config = '/etc/nginx/sites-available/default'
+$command_path = ['/usr/bin/', '/usr/sbin', '/bin']
 
 exec { 'update_package_repo':
-  command => ['/usr/bin/apt -y update', '/usr/bin/apt -y upgrade']
+  provider => 'shell',
+  path     => $command_path,
+  command  => 'sudo apt -y update',
+  before   => Exec['install_nginx']
 }
 
-package { 'nginx':
-  ensure   => 'installed',
-  provider => 'apt',
-  require  => Exec['update_package_repo']
+exec { 'install_nginx':
+  provider => 'shell',
+  command  => 'apt -y install nginx'
 }
 
-service { 'nginx_restart':
-  ensure => 'running',
-  enable => 'true'
+exec { 'nginx_restart':
+  provider => 'shell',
+  path     => $command_path,
+  command  => 'sudo service nginx restart'
 }
 
 exec { 'home_page':
-  command => ['echo "Hello World!" > $index', 'echo "Hello World" > $debian_index']
+  provider => 'shell',
+  path     => $command_path,
+  command  => ['sudo echo "Hello World!" > $index', 'sudo echo "Hello World!" > $debian_index']
 }
 
 exec { 'redirection':
   $pattern = 'server_name _;'
   $replacement = 'server_name _;\
 	rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;'
-  command => '/usr/bin/sed -i "s@$pattern@$replacement@g" $default_config'
-  notify  => Service['nginx_restart']
+  provider => 'shell',
+  path     => $command_path,
+  command  => '/usr/bin/sed -i "s@$pattern@$replacement@g" $default_config',
+  notify   => Exec['nginx_restart']
 }

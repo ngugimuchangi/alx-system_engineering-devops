@@ -14,7 +14,8 @@ exec { 'update_package_repo':
 
 exec { 'install_nginx':
   provider => 'shell',
-  command  => 'apt -y install nginx'
+  path     => $command_path,
+  command  => 'sudo apt -y install nginx'
 }
 
 exec { 'nginx_restart':

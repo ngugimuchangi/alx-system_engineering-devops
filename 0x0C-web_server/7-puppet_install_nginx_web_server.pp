@@ -1,8 +1,5 @@
 # Puppet manifest to configure nginx server
 
-$index = '/usr/share/nginx/html'
-$debian_index = '/var/www/html/index.nginx-debian.html'
-$default_config = '/etc/nginx/sites-available/default'
 $command_path = ['/usr/bin/', '/usr/sbin', '/bin']
 
 exec { 'update_package_repo':
@@ -20,20 +17,17 @@ exec { 'install_nginx':
 exec { 'home_page':
   provider => 'shell',
   path     => $command_path,
-  command  => ['sudo echo "Hello World!" | sudo tee $index', 'sudo echo "Hello World!" | sudo tee $debian_index']
+  command  => 'sudo echo "Hello World!" | sudo tee /usr/share/nginx/html/index.html'
 }
 
 exec { 'redirection':
-  $pattern = 'server_name _;'
-  $replacement = 'server_name _;\
-	rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;'
   provider => 'shell',
   path     => $command_path,
-  command  => 'sudo sed -i "s@$pattern@$replacement@g" $default_config',
+  command  => 'sudo sed -i s@$"server_name _;"@"server_name _;\n\trewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;"@g /etc/nginx/sites-available/default'
 }
 
-exec { 'nginx_restart':
+exec { 'nginx_start':
   provider => 'shell',
   path     => $command_path,
-  command  => 'sudo service nginx restart'
+  command  => 'sudo service nginx start'
 }

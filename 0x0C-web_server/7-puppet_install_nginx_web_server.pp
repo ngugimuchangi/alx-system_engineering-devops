@@ -17,13 +17,13 @@ exec { 'install_nginx':
 exec { 'home_page':
   provider => 'shell',
   path     => $command_path,
-  command  => 'sudo echo "Hello World!" | sudo tee /usr/share/nginx/html/index.html'
+  command  => 'sudo echo "Hello World!" | sudo tee /var/www/html/index.nginx-debain.html'
 }
 
 exec { 'redirection':
   provider => 'shell',
   path     => $command_path,
-  command  => 'sudo sed -i s@$"server_name _;"@"server_name _;\n\trewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;"@g /etc/nginx/sites-available/default'
+  command  => 'sudo sed -i "s@server_name _;@server_name _;\n\trewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;@g" /etc/nginx/sites-available/default'
 }
 
 exec { 'nginx_start':

@@ -17,7 +17,7 @@ exec { 'install_nginx':
 exec { 'home_page':
   provider => 'shell',
   path     => $command_path,
-  command  => 'sudo echo "Hello World!" | sudo tee /var/www/html/index.nginx-debain.html'
+  command  => 'sudo echo "Hello World!" | sudo tee /var/www/html/index.nginx-debian.html'
 }
 
 exec { 'redirection':

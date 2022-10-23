@@ -42,10 +42,10 @@ System engineering DevOps projects
 > * [0x0B-ssh](0x0B-ssh)
 
 ### 12. 0x0C. Web server
-> * []()
+ * [0x0C-web_server](0x0C-web_server)
 
 ### 13. 0x0D. Web stack debugging #0
-> * []()
+> * [0x0D-web_stack_debugging_0](0x0D-web_stack_debugging_0)
 
 ### 14. Command line challenge
 > * [command_line_for_the_win](command_line_for_the_win)

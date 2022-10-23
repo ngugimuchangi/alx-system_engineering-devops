@@ -1,7 +1,7 @@
 # 0x0C. Web server
 
 # About
-Working with Nginx webserver
+Working with Nginx web server
 * Installtion
 * Configuration
 * Creating server blocks

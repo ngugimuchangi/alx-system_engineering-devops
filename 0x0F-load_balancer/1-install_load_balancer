@@ -6,3 +6,16 @@ sudo apt -y upgrade
 sudo apt -y --no-install-recommends software-properies-common
 sudo add-apt-repository -y ppa:vbernat/haproxy-2.0
 sudo apt install haproxy=2.0.\*
+front_end="\nfrontend softwaremania
+	bind *:80
+	default_backend softwaremania\n\n"
+
+back_end="backend servermania
+	balance roundrobin
+	mode http
+	server 46996-web-01 44.200.168.223:80
+	server 46996-web-02 18.204.14.103:80"
+
+echo -e "$front_end" | sudo tee -a /etc/haproxy/haproxy.cfg
+echo -e "$back_end" | sudo tee -a /etc/haproxy/haproxy.cfg
+service haproxy restart

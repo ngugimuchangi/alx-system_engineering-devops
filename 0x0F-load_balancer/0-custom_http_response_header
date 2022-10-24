@@ -4,13 +4,26 @@
 # shellcheck disable=SC2016 # variable expansion is will be done by nginx
 
 pattern='server_name _;'
+pattern_2="^\tlocation / {"
+custom_404="\terror_page 404 /404.html;\
+	location = /404.html {\
+		root /usr/share/nginx/html;\
+		internal;\
+	}\n\n\
+	location / {"
+
 custom_header='server_name _\
-	add-header X-Served-By $hostname;'
+	add-header X-Served-By $HOSTNAME;'
+redirection="server_name _;\
+	rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;"
 file='/etc/nginx/sites-available/default'
 
 sudo apt -y update
 sudo apt -y upgrade
 sudo apt -y install nginx
-sudo sed -i s/"$pattern"/"$custom_header" "$file"
+sudo sed -i s/"$pattern"/"$redirection"/g "$file"
+sudo sed -i s/"$pattern"/"$custom_header"/g "$file"
+sudo sed -iE s/"$pattern_2"/"$custom_404"/g "$file"
 sudo sh -c 'echo "Hello World!" > /var/www/html/index.nginx-debian.html'
+sudo sh -c 'echo -e "Ceci n'\''est pas une page" > /usr/share/nginx/html/404.html'
 sudo service nginx restart

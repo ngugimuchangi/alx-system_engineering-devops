@@ -10,4 +10,6 @@ sudo apt -y update
 sudo apt -y upgrade
 sudo apt -y install nginx
 sudo sed -i 13i\\\\t"$custom_header" "$file"
+sudo sh -c "echo 'Hello World!' >  /var/www/html/index.nginx-debian.html"
+sudo sh -c "echo 'Hello World!' >  /usr/share/nginx/html/index.html"
 sudo service nginx restart

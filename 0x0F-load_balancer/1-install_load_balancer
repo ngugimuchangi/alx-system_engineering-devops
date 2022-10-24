@@ -4,17 +4,16 @@
 sudo apt -y update
 sudo apt -y upgrade
 sudo apt -y install haproxy
-# front_end="\nfrontend softwaremania
-#	bind *:80
-#	default_backend softwaremania\n\n"
+front_end="\nfrontend softwaremania
+	bind *:80
+	default_backend softwaremania\n\n"
 
-# back_end="backend servermania
-#	balance roundrobin
-#	mode http
-#	server 46996-web-01 44.200.168.223:80
-#	server 46996-web-02 18.204.14.103:80"
-listen="a\listen 1091-lb-01\n\tbind *:80\n\tmode http\n\tbalance roundrobin\n\toption httpclose\n\toption forwardfor\n\tserver 1091-web-01 35.237.235.204:80 check\n\tserver 1091-web-02 34.73.24.78:80 check" 
+back_end="backend servermania
+	balance roundrobin
+	mode http
+	server 46996-web-01 44.200.168.223:80
+	server 46996-web-02 18.204.14.103:80"
 
-# echo -e "$front_end" | sudo tee -a /etc/haproxy/haproxy.cfg
-echo -e "$listen" | sudo tee -a /etc/haproxy/haproxy.cfg
+echo -e "$front_end" | sudo tee -a /etc/haproxy/haproxy.cfg
+echo -e "$back_end" | sudo tee -a /etc/haproxy/haproxy.cfg
 sudo service haproxy restart

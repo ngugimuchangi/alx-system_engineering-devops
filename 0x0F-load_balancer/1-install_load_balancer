@@ -18,4 +18,4 @@ back_end="backend servermania
 
 echo -e "$front_end" | sudo tee -a /etc/haproxy/haproxy.cfg
 echo -e "$back_end" | sudo tee -a /etc/haproxy/haproxy.cfg
-service haproxy restart
+sudo service haproxy restart

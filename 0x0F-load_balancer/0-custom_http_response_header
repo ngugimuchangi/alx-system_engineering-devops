@@ -25,5 +25,6 @@ sudo sed -i s/"$pattern"/"$redirection"/g "$file"
 sudo sed -i s/"$pattern"/"$custom_header"/g "$file"
 sudo sed -iE s/"$pattern_2"/"$custom_404"/g "$file"
 sudo sh -c 'echo "Hello World!" > /var/www/html/index.nginx-debian.html'
+sudo sh -c 'echo "Hello World!" > /usr/share/nginx/html/index.html'
 sudo sh -c 'echo -e "Ceci n'\''est pas une page" > /usr/share/nginx/html/404.html'
 sudo service nginx restart

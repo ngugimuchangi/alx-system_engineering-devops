@@ -11,3 +11,4 @@ file='/etc/nginx/sites-available/default'
 sudo apt -y update
 sudo apt -y install nginx
 sudo sed -i s/"$pattern"/"$replacement" "$file"
+sudo service nginx restart

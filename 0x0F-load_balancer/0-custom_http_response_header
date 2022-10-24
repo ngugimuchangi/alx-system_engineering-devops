@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Script to install nginx server and configure custom header
+
+# shellcheck disable=SC2016 # variable expansion is will be done by nginx
+
+pattern='server_name _;'
+replacement='server_name _\
+	add-header X-Served-By $hostname;'
+file='/etc/nginx/sites-available/default'
+
+sudo apt -y update
+sudo apt -y install nginx
+sudo sed -i s/"$pattern"/"$replacement" "$file"

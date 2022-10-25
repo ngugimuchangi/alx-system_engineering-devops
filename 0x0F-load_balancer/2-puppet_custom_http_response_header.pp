@@ -10,14 +10,10 @@ exec { 'nginx':
   provider => 'shell'
 }
 
-exec { 'start':
-  command  => 'sudo service nginx start',
-  provider => 'shell'
-}
-
 exec { 'config':
   command  => 'sudo sed -i s@"http {"@"http {\n\tadd_header X-Served-By \$HOSTNAME;"@g /etc/nginx/nginx.conf',
   provider => 'shell',
+  notify   => Exec['restart']
 }
 
 exec { 'restart':

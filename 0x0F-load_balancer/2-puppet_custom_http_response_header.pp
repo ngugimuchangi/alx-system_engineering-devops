@@ -14,6 +14,6 @@ exec { 'nginx':
 
 exec { 'config':
   provider => 'shell',
-  command  => 'sudo sed 13i\\\\t"add-header X-Served-By $hostname" /etc/nginx/nginx.conf',
+  command  => 'sudo sed 13i\\\\t"add-header X-Served-By $hostname;" /etc/nginx/nginx.conf',
   path     => '/usr/bin'
 }

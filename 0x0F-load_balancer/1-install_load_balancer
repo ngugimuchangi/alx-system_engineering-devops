@@ -5,7 +5,7 @@ sudo apt -y update
 sudo apt -y upgrade
 sudo apt -y install haproxy
 
-config="listen load-balancer
+config="\nlisten load-balancer
 	bind *:80
 	mode http
 	balance roundrobin

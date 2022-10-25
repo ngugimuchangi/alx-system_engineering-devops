@@ -1,7 +1,7 @@
 # Puppet manifest to install nginx and add custom header
 
 exec { 'update':
-  command  => ['sudo apt -y update', '&& sudo apt -y upgrade'],
+  command  => 'sudo apt -y update',
   provider => 'shell'
 }
 

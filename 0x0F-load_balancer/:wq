@@ -1,0 +1,5 @@
+# Puppet manifest to install nginx and add custom header
+
+exec { 'update'
+  provider: 'shell'
+}

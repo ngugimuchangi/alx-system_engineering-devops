@@ -10,6 +10,11 @@ exec { 'nginx':
   provider => 'shell'
 }
 
+exec { 'start':
+  command  => 'sudo service nginx start',
+  provider => 'shell'
+}
+
 exec { 'config':
   command  => 'sudo sed -i "13i\\\tadd_header X-Served-By $HOSTNAME;" /etc/nginx/nginx.conf',
   provider => 'shell',

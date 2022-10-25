@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Script to install nginx server and configure custom header
 # shellchek disable=SC2154 # disable for shell version 0.3.7
+# shellcheck disable=SC2016 # variable expansion is will be done by nginx
 
 custom_header='add_header X-Served-By $HOSTNAME;'
 file='/etc/nginx/nginx.conf'
@@ -8,5 +9,5 @@ file='/etc/nginx/nginx.conf'
 sudo apt -y update
 sudo apt -y upgrade
 sudo apt -y install nginx
-sudo sed -i 11i\\\\t"$custom_header" "$file"
+sudo sed -i 13i\\\\t"$custom_header" "$file"
 sudo service nginx restart

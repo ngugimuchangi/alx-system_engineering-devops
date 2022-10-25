@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # Script to install nginx server and configure custom header
-# shellchek disable=SC2154 # disable for shell version 0.3.7
-# shellcheck disable=SC2016 # variable expansion is will be done by nginx
+# shellchek disable=SC2154
+# shellcheck disable=SC2016
 
-custom_header='add_header X-Served-By $HOSTNAME;'
+custom_header='add_header X-Served-By $hostname;'
 file='/etc/nginx/nginx.conf'
 
 sudo apt -y update

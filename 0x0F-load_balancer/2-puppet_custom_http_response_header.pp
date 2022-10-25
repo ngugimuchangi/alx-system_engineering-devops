@@ -8,7 +8,7 @@ exec { 'update':
 
 exec { 'nginx':
   provider => 'shell',
-  command  => 'sudo apt -y install haproxy',
+  command  => 'sudo apt -y install nginx',
   path     => '/usr/bin'
 }
 

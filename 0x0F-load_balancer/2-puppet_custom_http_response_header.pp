@@ -2,7 +2,7 @@
 
 exec { 'update':
   provider => 'shell',
-  command  => ['sudo apt -y update', 'sudo apt -y upgrade'],
+  command  => ['sudo apt -y update', ' && sudo apt -y upgrade'],
   path     => '/usr/bin'
 }
 
@@ -14,6 +14,6 @@ exec { 'nginx':
 
 exec { 'config':
   provider => 'shell',
-  command  => ['sudo sed 13i\\\\t"add-header X-Served-By $hostname;" /etc/nginx/nginx.conf', 'sudo service nginx restart'],
+  command  => ['sudo sed 13i\\\\t"add-header X-Served-By $hostname;" /etc/nginx/nginx.conf', ' && sudo service nginx restart'],
   path     => '/usr/bin'
 }

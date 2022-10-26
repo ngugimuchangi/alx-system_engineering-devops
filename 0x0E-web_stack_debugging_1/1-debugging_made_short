@@ -1,4 +1,4 @@
-#!/usr/bin/env/bash
+#!/usr/bin/env bash
 # Script to fix nginx configuration file
 ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
 service nginx start

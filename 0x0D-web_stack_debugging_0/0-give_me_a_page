@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Script to fix apache server
 
-service apache2 reload
+service apache2 start

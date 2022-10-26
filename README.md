@@ -47,5 +47,11 @@ System engineering DevOps projects
 ### 13. 0x0D. Web stack debugging #0
  * [0x0D-web_stack_debugging_0](0x0D-web_stack_debugging_0)
 
-### 14. Command line challenge
+### 14. 0x0E. Web stack debugging #1 
+ * [0x0E-web_stack_debugging_1](0x0E-web_stack_debugging_1)
+
+### 15. 0x0F. Load balancer 
+ * [0x0F-load_balancer](0x0F-load_balancer)
+
+### 16. Command line challenge
  * [command_line_for_the_win](command_line_for_the_win)

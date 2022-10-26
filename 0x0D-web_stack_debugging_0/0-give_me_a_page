@@ -1,1 +1,4 @@
+#!/bin/bash
+# Script to fix apache server
+
 service apache2 reload

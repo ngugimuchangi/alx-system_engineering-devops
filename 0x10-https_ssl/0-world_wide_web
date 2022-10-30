@@ -13,7 +13,7 @@ dns_lookup()
         do
                 record_type=$(echo -e "$record" | tr '\t' ' ' | cut -d ' ' -f 4)
                 destination=$(echo -e "$record" | tr '\t' ' ' | cut -d ' ' -f 5)
-                echo "The sudomain $2 is a ""$record_type"" record and points to ""$destination"
+                echo "The subdomain $2 is a ""$record_type"" record and points to ""$destination"
         done
 }
 

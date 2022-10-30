@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Script to look up and display information for domain names
-# Usage 0-world_wide_web <domain> [subdomain]
-# Output format The subdomain [SUB_DOMAIN] is a [RECORD_TYPE] record and points to [DESTINATION]
+# Usage: 0-world_wide_web <domain> [subdomain]
+# Output format: The subdomain [SUB_DOMAIN] is a [RECORD_TYPE] record and points to [DESTINATION]
 
 # function to look up DNS records
 dns_lookup()

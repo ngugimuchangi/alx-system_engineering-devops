@@ -53,5 +53,8 @@ System engineering DevOps projects
 ### 15. 0x0F. Load balancer 
  * [0x0F-load_balancer](0x0F-load_balancer)
 
-### 16. Command line challenge
+### 16. 0x10. HTTPS SSL
+ * [0x10-https_ssl](0x10-https_ssl)
+
+### 17. Command line challenge
  * [command_line_for_the_win](command_line_for_the_win)

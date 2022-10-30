@@ -1,7 +1,7 @@
 # 0x10. HTTPS SSL
 
 ## About
-* Setting up Secure Sockets Layer (SSL) / Transport Secure Layer (TLS) in HAProxy
+* Setting up `Secure Sockets Layer (SSL)` / `Transport Secure Layer (TLS)` in HAProxy
     * Generating SSL certificates for host authentication
     * HAProxy configuration to enable `HTTPS`
 * Setting up subdomains

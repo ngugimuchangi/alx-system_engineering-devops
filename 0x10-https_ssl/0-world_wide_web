@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+if [ $# -eq 2 ]; then
+        address="$2.$1"
+        records=$(dig "$address" | grep "$address" | tail -n +3)
+        for record in "$records";
+        do
+                record_type="$(cut -f 4 $record)"
+                destination="$(cut -f 5 $record)"
+                echo "This sudomain $2 is a $record_type record and point to $destination"
+        done
+fi
+if [ $# -eq 1 ]; then

@@ -1,13 +1,36 @@
 #!/usr/bin/env bash
+# Script to look up and display information for domain names
+# Usage 0-world_wide_web <domain> [subdomain]
+# Output format The subdomain [SUB_DOMAIN] is a [RECORD_TYPE] record and points to [DESTINATION]
 
-if [ $# -eq 2 ]; then
+# function to look up DNS records
+dns_lookup()
+{
         address="$2.$1"
         records=$(dig "$address" | grep "$address" | tail -n +3)
-        for record in "$records";
+        IFS=$'\n'
+        for record in $records
         do
-                record_type="$(cut -f 4 $record)"
-                destination="$(cut -f 5 $record)"
-                echo "This sudomain $2 is a $record_type record and point to $destination"
+                record_type=$(echo -e "$record" | tr '\t' ' ' | cut -d ' ' -f 4)
+                destination=$(echo -e "$record" | tr '\t' ' ' | cut -d ' ' -f 5)
+                echo "This sudomain $2 is a ""$record_type"" record and point to ""$destination"
         done
-fi
+}
+
+# when only the domains is given
 if [ $# -eq 1 ]; then
+    domains[0]='www'
+    domains[1]='lb-01'
+    domains[2]='web-01'
+    domains[3]='web-02'
+    
+    for domain in "${domains[@]}"
+    do
+            dns_lookup "$1" "$domain"
+    done
+fi
+
+# when domain and subdomain are passed
+if [ $# -gt 1 ]; then
+        dns_lookup "$1" "$2"
+fi

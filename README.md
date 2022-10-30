@@ -6,7 +6,7 @@ System engineering DevOps projects
 ## Projects
 
 ### 0. Shell basics
-### [0x00-shell_basics](0x00-shell_basics)
+ * [0x00-shell_basics](0x00-shell_basics)
 
 ### 1. File permissions
  * [0x01-shell_permissions](0x01-shell_permissions)

@@ -1,6 +1,6 @@
-ufw disable
-ufw default deny incoming
-ufw allow proto tcp port 22
-ufw allow proto tcp port 443
-ufw allow proto tcp port 80
-ufw allow enable
+sudo ufw disable
+sudo ufw default deny incoming
+sudo ufw allow proto tcp port 22
+sudo ufw allow proto tcp port 443
+sudo ufw allow proto tcp port 80
+sudo ufw enable

@@ -1,3 +1,6 @@
+ufw disable
+ufw default deny incoming
 ufw allow proto tcp port 22
 ufw allow proto tcp port 433
 ufw allow proto tcp port 80
+ufw allow enable

@@ -65,5 +65,7 @@ System engineering DevOps projects
 ### 19. 0x13. Firewall
 * [0x13-firewall](0x13-firewall)
 
-### 20. Command line challenge
+### 20. 0x14. MySQL
+* [0x14-mysql](0x14-mysql)
+### 21. Command line challenge
  * [command_line_for_the_win](command_line_for_the_win)

@@ -4,5 +4,5 @@
 # Usage: ./0-iamsomeonelse <username>
 
 if [ $# -gt 0 ]; then
-	id -un "$1"
+	sudo -u "$1" whoami
 fi

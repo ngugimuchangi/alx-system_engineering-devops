@@ -6,4 +6,3 @@
 if [ $# -gt 0 ]; then
 	id -un "$1"
 fi
-

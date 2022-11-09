@@ -3,7 +3,7 @@
 # Usage: ./5-mysql_backup <password>
 
 if [ $# -gt 0 ]; then
-	mysqldump -u root -p "$1" --all-databases > backup.sql
+	mysqldump -u root -p "$1" --all-databases --result-file=backup.sql
 	date=$(date +%d-%m-%Y)
 	tar -czf "$date.tar.gz" backup.sql
 fi

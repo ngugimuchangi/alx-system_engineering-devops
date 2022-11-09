@@ -11,5 +11,6 @@
 3. Creating replica user
 4. Source-replica mysql configuration
 	* [4-mysql_configuration_primary](4-mysql_configuration_primary)
+	* [4-mysql_configuration_replica](4-mysql_configuration_replica)
 5. Script to create a compressed mysql backup file for all databases
 	* [5-mysql_backup](5-mysql_backup)

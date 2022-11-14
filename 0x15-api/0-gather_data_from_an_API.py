@@ -31,7 +31,8 @@ def todo(emp_id):
         print("Employee {} is done with tasks({}/{}):".format(
             user, completed, total))
         for task in tasks:
-            print("\t {}".format(task.get('title')))
+            if task.get('completed') is True:
+                print("\t {}".format(task.get('title')))
 
 
 if __name__ == '__main__':

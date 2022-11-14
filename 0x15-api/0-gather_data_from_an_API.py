@@ -28,7 +28,7 @@ def todo(emp_id):
             params.update({'completed': 'true'})
             completed = len(get(url_todo, params=params).json())
 
-        print("Employee {} is done with tasks({}/{})".format(
+        print("Employee {} is done with tasks({}/{}):".format(
             user, completed, total))
         for task in tasks:
             print("\t {}".format(task.get('title')))

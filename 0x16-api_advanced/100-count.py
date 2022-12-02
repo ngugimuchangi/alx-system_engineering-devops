@@ -5,12 +5,18 @@
 from requests import get
 
 
-def count_words(subreddit, word_list, count={}, after=None):
+def count_words(subreddit, word_list, key_words={}, count={}, after=None):
     """ get count of occurrence of words in word_list from
         titles in hot articles in given subreddit
     """
     if not count:
-        count = {word.lower(): 0 for word in word_list}
+        key_words = {word.lower(): 0 for word in word_list}
+        word_list_cpy = str(word_list).lower().strip("[]")
+        word_list_cpy = word_list_cpy.replace(',', '')
+        word_list_cpy = word_list_cpy.replace("'", '').split()
+        count = {word.lower(): word_list_cpy.count(word.lower())
+                 for word in word_list}
+
     if subreddit and type(subreddit) is str and word_list:
         url = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
         params = {'after': after, 'limit': 100}
@@ -27,15 +33,18 @@ def count_words(subreddit, word_list, count={}, after=None):
             for post in posts:
                 title = post.get('data').get('title').lower()
                 words = title.split()
-                for word in count.keys():
-                    count[word] += words.count(word)
+                for word in key_words.keys():
+                    key_words[word] += words.count(word)
 
             #  call recursive function if there's more data
             if after:
-                return count_words(subreddit, word_list, count, after)
+                return count_words(subreddit, word_list,
+                                   key_words, count, after)
             else:
-                count = sorted(count.items(),
-                               key=lambda item: (-item[1], item[0]))
-                for item in count:
+                for key in key_words.keys():
+                    key_words[key] *= count[key]
+                key_words = sorted(key_words.items(),
+                                   key=lambda item: (-item[1], item[0]))
+                for item in key_words:
                     if item[1] > 0:
                         print("{}: {}".format(item[0], item[1]))

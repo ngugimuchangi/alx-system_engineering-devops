@@ -2,7 +2,7 @@
 
 ## About
 More API practice
-  * Working with Reddit API
+  * Working with [Reddit API](https://www.reddit.com/dev/api/)
 
 ## Tasks
 0. Function that queries the [Reddit API](https://www.reddit.com/dev/api/) and returns the number of subscribers for a given subreddit

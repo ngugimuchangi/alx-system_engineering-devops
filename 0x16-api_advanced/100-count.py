@@ -10,12 +10,12 @@ def count_words(subreddit, word_list, count={}, after=None):
     """
     if not count:
         count = {word.lower(): 0 for word in word_list}
-    if subreddit and type(subreddit) is str:
+    if subreddit and type(subreddit) is str and word_list:
         url = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
         params = {'after': after, 'limit': 100}
         headers = {'user-agent': 'my-app/0.0.1'}
 
-        req = get(url, params=params, headers=headers)
+        req = get(url, params=params, headers=headers, allow_redirects=False)
         #  get data if request was successful
         if req.status_code == 200:
             data = req.json().get('data')
@@ -33,7 +33,7 @@ def count_words(subreddit, word_list, count={}, after=None):
             if after:
                 return count_words(subreddit, word_list, count, after)
             else:
-                count = sorted(count.items(), key=lambda item: item[1],
+                count = sorted(count.items(), key=lambda item: item,
                                reverse=True)
                 for item in count:
                     if item[1] > 0:

@@ -33,8 +33,7 @@ def count_words(subreddit, word_list, count={}, after=None):
             if after:
                 return count_words(subreddit, word_list, count, after)
             else:
-                count = sorted(count.items(), key=lambda item: item,
-                               reverse=True)
+                count = sorted(count.items(), key=lambda item: item)
                 for item in count:
                     if item[1] > 0:
                         print("{}: {}".format(item[0], item[1]))

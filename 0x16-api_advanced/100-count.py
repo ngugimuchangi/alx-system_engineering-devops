@@ -35,8 +35,7 @@ def count_words(subreddit, word_list, key_words={}, count={}, after=None):
 
         #  call recursive function if there's more data
         if after:
-            return count_words(subreddit, word_list,
-                               key_words, count, after)
+            return count_words(subreddit, word_list, key_words, count, after)
         else:
             for key in key_words.keys():
                 key_words[key] *= count[key]

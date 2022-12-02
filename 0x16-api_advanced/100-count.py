@@ -6,7 +6,8 @@ from requests import get
 
 
 def count_words(subreddit, word_list, count={}, after=None):
-    """ get count of word_list
+    """ get count of occurrence of words in word_list from
+        titles in hot articles in given subreddit
     """
     if not count:
         count = {word.lower(): 0 for word in word_list}
@@ -33,7 +34,8 @@ def count_words(subreddit, word_list, count={}, after=None):
             if after:
                 return count_words(subreddit, word_list, count, after)
             else:
-                count = sorted(count.items(), key=lambda item: item)
+                count = sorted(count.items(),
+                               key=lambda item: (-item[1], item[0]))
                 for item in count:
                     if item[1] > 0:
                         print("{}: {}".format(item[0], item[1]))

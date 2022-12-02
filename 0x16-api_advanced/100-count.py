@@ -25,7 +25,7 @@ def count_words(subreddit, word_list, count={}, after=None):
             #  get count of key words in each title
             for post in posts:
                 title = post.get('data').get('title').lower()
-                words = title
+                words = title.split()
                 for word in count.keys():
                     count[word] += words.count(word)
 

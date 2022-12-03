@@ -2,7 +2,7 @@
 
 ## About
 Server monitoring  
-	* Datadog
+* Datadog
 
 ## Tasks
 0. Installing datadog

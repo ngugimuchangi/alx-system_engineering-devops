@@ -1,8 +1,9 @@
 # 0x18. Webstack monitoring
 
 ## About
-Server Monitoring
+Server monitoring
     * Datadog
+
 ## Tasks
 0. Installing datadog
 1. Monitoring metrics

@@ -80,5 +80,14 @@ System engineering DevOps projects
 ### 24. 0x18. Webstack monitoring
 * [0x18-webstack_monitoring](0x18-webstack_monitoring)
 
-### 25. Command line challenge
+### 25. 0x19. Postmortem
+* [0x19-postmortem](0x19-postmortem)
+
+### 26. 0x1A. Application server
+* [0x1A-application_server](0x1A-application_server)
+
+### 27. 0x1B. Web stack debugging #4
+* [0x1B-web_stack_debugging_4](0x1B-web_stack_debugging_4)
+
+### 28. Command line challenge
  * [command_line_for_the_win](command_line_for_the_win)

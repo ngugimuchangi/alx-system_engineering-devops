@@ -3,7 +3,7 @@
 # Closes the workers one by one after they complete
 # pending request then restarts them
 
-pid=$(sudo systemctl show --propert MainPID gunicorn | cut -f 2 -d '=')
+pid=$(sudo systemctl show --property MainPID gunicorn | cut -f 2 -d '=')
 if ps -f --pid "$pid" > /dev/null; then
 	sudo kill -HUP "$pid"
 	sudo systemctl reload gunicorn

@@ -3,4 +3,5 @@
 # Closes the workers one by one after they complete
 # pending request then restarts them
 
-pkill -HUP gunicorn
+sudo pkill -HUP gunicorn
+sudo systemctl start gunicorn

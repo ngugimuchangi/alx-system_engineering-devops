@@ -1,6 +1,3 @@
 #!/usr/bin/env bash
 # Script to restart gunicorn service gracefully
-# Closes the workers one by one after they complete
-# pending request then restarts them
-
 pkill -HUP gunicorn
